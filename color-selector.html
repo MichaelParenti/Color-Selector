@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker</title>
+    <style>
+        body{
+            background-color:black;
+            display: flex;
+            align-items:center;
+            justify-content: center;
+        }
+        input{
+            background: black;
+            outline:none;
+            bottom: 20%;
+            position: absolute;
+        }
+        #box{
+            background: grey;
+            border: 3px solid black;
+            display: flex;
+            align-items:center;
+            justify-content: center;
+            position: absolute;
+            text-align: center;
+            padding: 2rem;
+            width: 60%;
+            height: 40%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        h1{
+            font-size:2rem;
+            top: 20%;
+            position: absolute;
+        }
+        button{
+            position: absolute;
+            bottom: 10%;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <h1>Click the button below <br> then click "Apply" <br> to change the color of the background.</h1>
+        <br>
+        <input id="color" type="color">
+        <button onclick="change();">Apply</button>
+    </div>
+    
+
+    <script>
+        function change(){
+
+            var color = document.getElementById("color").value;
+            var body = document.querySelector("body");
+
+            body.style.backgroundColor = color;
+        }
+        
+    </script>
+</body>
+</html>
